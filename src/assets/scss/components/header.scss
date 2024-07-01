@@ -1,0 +1,174 @@
+.header {
+    &__inner {
+        @include flex-center-between;
+        margin: 26px auto 22px;
+
+        @include mobile {
+            margin: 16px auto 12px;
+        }
+    }
+
+    &__logo {
+        position: relative;
+        z-index: var(--z-index-03);
+
+        & path {
+            &:not(:last-child) {
+                fill: var(--logo-color-text);
+            }
+        }
+
+        & circle {
+            fill: var(--logo-color-circle);
+        }
+
+        @include mobile {
+            svg {
+                width: 130px;
+            }
+        }
+    }
+
+    &__right {
+        @include flex-center-between;
+        gap: 30px;
+        width: 100%;
+        max-width: 450px;
+
+        .nav {
+            width: 100%;
+            max-width: 276px;
+
+            &__list {
+                @include flex-align-center;
+                gap: 32px;
+
+                @include small-tablet {
+                    flex-direction: column;
+                }
+
+                @include small-tablet {
+                    gap: 10px;
+                }
+            }
+
+            &__link {
+                position: relative;
+                color: var(--neutral-color-100);
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: -5px;
+                    left: 0;
+                    height: 1px;
+                    background-color: var(--neutral-color-100);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: var(--transition-04);
+                }
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+
+                @include small-tablet {
+                    padding: 5px;
+                    line-height: 250%;
+                }
+            }
+        }
+
+        @include tablet {
+            max-width: 400px;
+        }
+
+        .button {
+            @include flex-column-all-center;
+            gap: 2px;
+            cursor: pointer;
+
+            &__text {
+                font-weight: 600;
+                line-height: 1.5;
+            }
+
+            &__checkbox {
+                appearance: none;
+                position: relative;
+                border-radius: 13px;
+                width: 63px;
+                height: 27px;
+                background-color: var(--neutral-color-130);
+                transition: var(--transition-04);
+                cursor: pointer;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 2px;
+                    left: 3px;
+                    border-radius: 50%;
+                    width: 23px;
+                    height: 23px;
+                    background-color: var(--neutral-color-120);
+                    transition: var(--transition-04);
+                }
+
+                &:checked {
+                    background-color: var(--neutral-color-60);
+
+                    &::before {
+                        left: calc(3px + 35px);
+                        background-color: var(--focus-iris);
+                    }
+                }
+            }
+        }
+
+        @include small-tablet {
+            position: fixed;
+            top: 0;
+            left: -80dvw;
+            z-index: var(--z-index-01);
+            flex-direction: column;
+            justify-content: center;
+            height: 100dvh;
+            max-width: 80dvw;
+            background-color: var(--neutral-color-10);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-04);
+        }
+
+        &--visible {
+            left: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.overlay {
+    @include small-tablet {
+        position: fixed;
+        inset: 0;
+        background-color: var(--neutral-color-130);
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition-04);
+
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.burger {
+    @include burger;
+}

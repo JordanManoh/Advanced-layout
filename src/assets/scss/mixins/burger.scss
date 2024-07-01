@@ -1,13 +1,13 @@
 @mixin burger {
     --burger-width: 28px;
-    --burger-height: 22px;
+    --burger-height: 23px;
     --burger-line-height: 3px;
     position: relative;
-    z-index: var(--z-index-3);
+    z-index: var(--z-index-03);
     display: none;
     width: var(--burger-width);
     height: var(--burger-height);
-    color: var(--neutral-color-140);
+    color: var(--neutral-color-100);
     background-color: transparent;
 
     @include small-tablet {

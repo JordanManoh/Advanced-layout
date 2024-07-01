@@ -2,10 +2,6 @@
 @import './base';
 @import './globals/';
 
-.header {
-    @include flex-align-center;
+// components
 
-    @include small-desktop {
-        color: red;
-    }
-}
+@import './components/header';
