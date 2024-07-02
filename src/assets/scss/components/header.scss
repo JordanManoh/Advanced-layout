@@ -1,7 +1,8 @@
 .header {
     &__inner {
         @include flex-center-between;
-        margin: 26px auto 22px;
+        padding-top: 26px;
+        padding-bottom: 22px;
 
         @include mobile {
             margin: 16px auto 12px;

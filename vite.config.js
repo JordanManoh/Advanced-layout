@@ -17,6 +17,7 @@ export default defineConfig({
             },
         },
     },
+    base: '/Advanced-layout/',
     plugins: [
         ViteMinifyPlugin(),
         injectHTML(),
