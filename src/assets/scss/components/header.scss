@@ -1,4 +1,6 @@
 .header {
+    transition: var(--transition-04);
+
     &__inner {
         @include flex-center-between;
         padding-top: 26px;
@@ -55,6 +57,7 @@
 
             &__link {
                 position: relative;
+                font-weight: 500;
                 color: var(--neutral-color-100);
 
                 &::after {
@@ -158,13 +161,14 @@
     @include small-tablet {
         position: fixed;
         inset: 0;
-        background-color: var(--neutral-color-130);
+        z-index: var(--z-index-04);
+        background-color: var(--neutral-color-120);
         opacity: 0;
         visibility: hidden;
         transition: var(--transition-04);
 
         &--visible {
-            opacity: 1;
+            opacity: 0.9;
             visibility: visible;
         }
     }

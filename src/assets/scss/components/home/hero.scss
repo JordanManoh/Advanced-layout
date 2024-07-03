@@ -1,12 +1,10 @@
 .hero {
     position: relative;
     background-color: var(--neutral-color-10);
-    transition: var(--transition-04);
 
     &::before {
         top: 13px;
         left: 51px;
-        z-index: var(--z-index-03);
         display: inline-block;
         border-radius: 50%;
         width: 551px;
@@ -19,7 +17,6 @@
     &::after {
         right: 0;
         bottom: 0;
-        z-index: var(--z-index-01);
         width: 525px;
         height: 525px;
         background: var(--success-color-70);
@@ -40,6 +37,8 @@
     &::after {
         content: '';
         position: absolute;
+        z-index: 3;
+        display: contents;
         display: inline-block;
         border-radius: 50%;
 
@@ -65,6 +64,10 @@
 
     &__left {
         max-width: 617px;
+
+        @include mobile {
+            max-width: 480px;
+        }
     }
 
     &__title {
@@ -78,6 +81,18 @@
         @include mini-desktop {
             text-align: center;
         }
+
+        @include tablet {
+            font-size: 60px;
+        }
+
+        @include mobile {
+            font-size: 45px;
+        }
+
+        @include small-mobile {
+            font-size: 38px;
+        }
     }
 
     &__subtitle {
@@ -87,7 +102,16 @@
         @include flex-align-center;
 
         @include mini-desktop {
+            margin-top: 80px;
             text-align: center;
+        }
+
+        @include tablet {
+            margin-top: 60px;
+        }
+
+        @include small-mobile {
+            margin-top: 30px;
         }
 
         &::before {
@@ -114,22 +138,33 @@
         @include mini-desktop {
             justify-content: center;
         }
+
+        @include small-mobile {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__input {
         z-index: var(--z-index-01);
         border-bottom: 1px solid var(--neutral-color-40);
         padding-bottom: 23px;
-        min-width: 280px;
+        width: 100%;
+        max-width: 280px;
         font-weight: 400;
         font-size: 16px;
         line-height: 1.5;
         color: var(--neutral-color-100);
         background-color: transparent;
+
+        @include mobile {
+            max-width: 180px;
+        }
     }
 
     &__right {
         position: relative;
+        z-index: var(--z-index-04);
 
         @include mini-desktop {
             display: none;
@@ -186,8 +221,8 @@
     }
 
     &__stats {
-        position: relative;
-        z-index: 2;
+        position: absolute;
+        z-index: var(--z-index-02);
         margin-top: 29px;
         border-radius: 8px;
         padding: 20px 29px;
@@ -216,7 +251,7 @@
                 color: #fff;
 
                 &:nth-child(1) {
-                    padding-right: 80px;
+                    padding-right: 75px;
                 }
             }
 
@@ -231,7 +266,7 @@
                     color: #60d39c;
 
                     &::before {
-                        background: url('../assets/icons/green-arrow-icon.svg');
+                        background: url('/assets/icons/arrow-up.svg');
                     }
                 }
 
@@ -239,7 +274,7 @@
                     color: #e35454;
 
                     &::before {
-                        background: url('../assets/icons/red-arrow-icon.svg');
+                        background: url('/assets/icons/arrow-down.svg');
                     }
                 }
 

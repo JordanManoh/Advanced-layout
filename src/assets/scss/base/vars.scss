@@ -9,6 +9,9 @@
     --neutral-color-130: #d9d9d9;
     --neutral-color-140: #343542;
 
+    // success colors
+    --success-color-70: #e2f8f0b3;
+
     // logo color
     --logo-color-text: #101010;
     --logo-color-circle: #101010;
@@ -34,7 +37,7 @@
     // neutral colors
     --neutral-color-10: #1d1e25;
     --neutral-color-100: #fff;
-    --neutral-color-130: #343542;
+    --neutral-color-120: #343542;
 
     // logo colors
     --logo-color-text: #fff;
@@ -46,11 +49,19 @@
     top: 0;
     right: 0;
     left: 0;
-    z-index: var(--z-index-03);
-    background-color: var(--neutral-color-10);
+    z-index: 5;
+    background-color: transparent;
     transition: var(--transition-04);
 }
 
 [data-menu='fixed-menu'][data-state='hidden'] {
     transform: translateY(-100%);
+}
+
+[data-menu='fixed-menu'][data-state='scrolled'] {
+    background-color: var(--neutral-color-10);
+}
+
+[data-menu='fixed-menu'][data-state='visible'] {
+    background-color: var(--neutral-color-10); /* Цвет фона при видимом меню */
 }
