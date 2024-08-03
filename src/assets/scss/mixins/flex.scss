@@ -29,6 +29,11 @@
     justify-content: space-between;
 }
 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 @mixin flex-column-all-center {
     display: flex;
     flex-direction: column;

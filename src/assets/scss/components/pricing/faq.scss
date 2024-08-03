@@ -1,0 +1,105 @@
+.faq {
+    padding: 82px 0 160px;
+    text-align: center;
+
+    @include mobile {
+        padding: 42px 0 80px;
+    }
+
+    &__inner {
+        max-width: 1114px;
+    }
+
+    &__title {
+        font-weight: 600;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+    }
+
+    &__descr {
+        margin-top: 24px;
+        margin-bottom: 80px;
+        font-weight: 500;
+        line-height: 1.78;
+        color: var(--neutral-color-150);
+
+        @include mobile {
+            margin-top: 18px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__accordion {
+        border-bottom: 1px solid var(--neutral-color-30);
+        padding-bottom: 32px;
+        text-align: left;
+
+        @include mobile {
+            padding-bottom: 12px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 56px;
+
+            @include mobile {
+                margin-bottom: 36px;
+            }
+        }
+
+        &-control {
+            gap: 15px;
+
+            @include flex-center-between;
+            list-style: none;
+            cursor: pointer;
+
+            &-title {
+                font-weight: 600;
+                line-height: 1.5;
+                color: var(--neutral-color-100);
+            }
+
+            &-icon {
+                position: relative;
+                display: block;
+                border-radius: 2px;
+                width: 18px;
+                height: 4px;
+                background-color: var(--neutral-color-100);
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -7px;
+                    right: 7px;
+                    display: block;
+                    border-radius: 2px;
+                    width: 4px;
+                    height: 18px;
+                    background-color: var(--neutral-color-100);
+                }
+            }
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+        }
+
+        &[open] &-control {
+            &-icon::before {
+                display: none;
+            }
+        }
+
+        &-text {
+            margin-top: 16px;
+            font-weight: 500;
+            line-height: 1.78;
+            color: var(--neutral-color-150);
+
+            @include mobile {
+                margin-top: 10px;
+            }
+        }
+    }
+}

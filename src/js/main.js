@@ -4,34 +4,14 @@ import '../assets/scss/main.scss';
 
 import { useTheme } from './components/theme';
 import { useBurger } from './components/burger';
+import { useHomeSliders } from './components/home/slider';
+import { usePartnersSlider } from './components/partners-slide';
+import { useHeaderScroll } from './headerScroll';
+import { useFooter } from './components/footer';
 
 useTheme();
 useBurger();
-
-document.addEventListener('DOMContentLoaded', function () {
-    var lastScrollTop = 0;
-    var menu = document.querySelector('[data-menu="fixed-menu"]');
-
-    window.addEventListener(
-        'scroll',
-        function () {
-            var currentScroll =
-                window.scrollY || document.documentElement.scrollTop;
-
-            if (currentScroll > lastScrollTop) {
-                // Скролл вниз
-                menu.setAttribute('data-state', 'hidden');
-            } else if (currentScroll < lastScrollTop && currentScroll > 0) {
-                // Скролл вверх
-                menu.setAttribute('data-state', 'visible');
-            } else if (currentScroll === 0) {
-                // В начале страницы
-                menu.setAttribute('data-state', 'default');
-            }
-
-            // Обновляем lastScrollTop
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Для мобильных или отрицательных значений
-        },
-        false,
-    );
-});
+useHeaderScroll();
+useHomeSliders();
+usePartnersSlider();
+useFooter();

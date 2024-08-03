@@ -1,0 +1,136 @@
+.hero {
+    padding: 114px 0 155px;
+
+    @include mobile {
+        padding: 90px 0;
+    }
+
+    &__title {
+        margin-top: 90px;
+        max-width: 741px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+
+        @include mobile {
+            margin-top: 40px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 450px;
+            text-align: center;
+        }
+    }
+
+    &__content {
+        gap: 82px;
+        margin-top: 82px;
+
+        @include flex-justify-between;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            gap: 40px;
+            margin-top: 40px;
+        }
+    }
+
+    &__map {
+        width: 100% !important;
+        height: 555px;
+
+        @include tablet {
+            height: 500px;
+        }
+
+        @include small-tablet {
+            height: 450px;
+        }
+
+        @include mobile {
+            height: 400px;
+        }
+
+        @include small-mobile {
+            height: 300px;
+        }
+
+        &-inner {
+            width: 100% !important;
+            max-width: 987px !important;
+        }
+    }
+
+    &__contacts {
+        flex-grow: 1;
+        width: 100%;
+        max-width: 176px;
+
+        @include tablet {
+            @include flex-center-between;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: none;
+        }
+
+        @include small-tablet {
+            justify-content: center;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        &-item {
+            border-bottom: 1px solid var(--neutral-color-50);
+            padding-bottom: 14px;
+            max-width: 176px;
+
+            @include tablet {
+                padding-bottom: 32px;
+            }
+
+            @include mobile {
+                padding-bottom: 14px;
+            }
+
+            &:not(:first-child) {
+                margin-top: 40px;
+                padding-bottom: 32px;
+
+                @include tablet {
+                    margin-top: 0;
+                    padding-bottom: auto;
+                }
+
+                @include mobile {
+                    padding-bottom: 14px;
+                }
+            }
+        }
+
+        &-title {
+            font-weight: 700;
+            line-height: 1.33;
+            color: var(--neutral-color-100);
+        }
+
+        &-descr {
+            margin-top: 8px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: var(--neutral-color-150);
+        }
+
+        &-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: 500;
+            line-height: 1.62;
+            text-align: center;
+            color: var(--neutral-color-100);
+        }
+    }
+}

@@ -1,0 +1,132 @@
+.getstarted {
+    position: relative;
+    margin: 170px auto 261px;
+    max-width: 1440px;
+
+    @include tablet {
+        margin-bottom: 200px;
+    }
+
+    @include mobile {
+        margin: 90px 0 160px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__content {
+        border: 1px solid var(--neutral-color-40);
+        padding: 56px 48px;
+        width: 100%;
+        max-width: 608px;
+        background: #fff;
+
+        @include mobile {
+            padding: 28px 24px;
+            max-width: 450px;
+        }
+
+        @include tablet {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        &-title {
+            font-weight: 600;
+            line-height: 1.22;
+            letter-spacing: -0.02em;
+            color: #1d1e25;
+        }
+
+        &-descr {
+            margin-top: 20px;
+            font-weight: 400;
+            line-height: 1.67;
+            color: var(--neutral-color-150);
+
+            @include mobile {
+                margin-top: 10px;
+            }
+        }
+
+        &-link {
+            font-weight: 500;
+            color: var(--hover-iris);
+        }
+    }
+
+    &__form {
+        gap: 24px;
+        align-items: flex-start;
+        margin-top: 48px;
+
+        @include flex-column;
+
+        @include mobile {
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        @include small-mobile {
+            align-items: center;
+        }
+
+        &-top {
+            gap: 15px;
+            width: 100%;
+
+            @include flex-center-between;
+
+            @include mobile {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        &-label {
+            gap: 6px;
+            width: 100%;
+            font-weight: 500;
+            line-height: 1.43;
+            color: #1d1e25;
+
+            @include flex-column;
+
+            &--small {
+                max-width: 240px;
+
+                @include small-mobile {
+                    max-width: 300px;
+                }
+            }
+        }
+
+        &-input {
+            border: 1px solid var(--neutral-color-30);
+            border-radius: 8px;
+            padding: 10px 14px;
+            width: 100%;
+            height: 44px;
+
+            &--textarea {
+                outline: none;
+                height: 134px;
+                resize: none;
+            }
+        }
+
+        &-button {
+            margin-top: calc(32px - 24px);
+            max-width: 167px;
+            color: #fff;
+            background-color: #1d1e25;
+        }
+    }
+}

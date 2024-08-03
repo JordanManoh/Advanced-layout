@@ -3,6 +3,7 @@ html {
     font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 16px;
+    line-height: 1.2;
     scroll-behavior: smooth;
 }
 
@@ -12,18 +13,25 @@ html {
     box-sizing: inherit;
 }
 
-body {
+.body {
     overflow-x: hidden;
     color: var(--neutral-color-100);
     background-color: var(--neutral-color-10);
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+    }
+}
+
+.main {
+    flex-grow: 1;
 }
 
 .no-scroll {
     overflow: hidden;
-}
-
-main {
-    height: 2000px;
 }
 
 img {
@@ -66,7 +74,12 @@ button {
     cursor: pointer;
 }
 
+label {
+    cursor: pointer;
+}
+
 .container {
+    position: relative;
     margin: 0 auto;
     padding: 0 var(--container-padding);
     max-width: calc(var(--container-width) + (var(--container-padding) * 2));

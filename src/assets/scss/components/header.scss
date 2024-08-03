@@ -5,10 +5,7 @@
         @include flex-center-between;
         padding-top: 26px;
         padding-bottom: 22px;
-
-        @include mobile {
-            margin: 16px auto 12px;
-        }
+        max-height: 114px;
     }
 
     &__logo {
@@ -94,7 +91,6 @@
         .button {
             @include flex-column-all-center;
             gap: 2px;
-            cursor: pointer;
 
             &__text {
                 font-weight: 600;

@@ -1,0 +1,65 @@
+.button {
+    &-form {
+        border-radius: 100px;
+        padding: 16px 32px;
+        width: 100%;
+        max-width: 175px;
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--neutral-color-10);
+        background-color: var(--neutral-color-100);
+        transition: var(--transition-04);
+
+        @include small-tablet {
+            padding: 12px 32px;
+            max-width: 160px;
+        }
+    }
+
+    &-form:hover,
+    &-slider-next:hover,
+    &-slider-prev:hover {
+        opacity: 0.8;
+    }
+
+    &-slider {
+        &-prev,
+        &-next {
+            border: 1px solid var(--border-color-var-2-active);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            background-color: var(--button-color-var-2-active);
+            transition: var(--transition-04);
+            cursor: pointer;
+
+            @include flex-all-center;
+
+            @include small-mobile {
+                transform: scale(0.8);
+            }
+
+            svg {
+                path {
+                    fill: var(--arrow-color-var-2-active);
+                }
+            }
+
+            &.swiper-button-disabled {
+                border: 1px solid var(--border-color-var-2-disable);
+                background-color: var(--button-color-var-2-disable);
+                cursor: auto;
+
+                svg {
+                    path {
+                        fill: var(--arrow-color-var-2-disable);
+                    }
+                }
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
