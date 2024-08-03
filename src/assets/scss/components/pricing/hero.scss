@@ -275,6 +275,10 @@
                 line-height: 1.62;
                 color: var(--neutral-color-100);
 
+                &--best {
+                    color: #fff;
+                }
+
                 &--disabled {
                     svg {
                         path {

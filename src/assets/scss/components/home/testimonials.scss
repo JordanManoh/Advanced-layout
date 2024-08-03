@@ -91,6 +91,7 @@
             @include flex-all-center;
             gap: 8px;
             max-width: 164px;
+            color: var(--neutral-color-100);
         }
 
         &-comment {
