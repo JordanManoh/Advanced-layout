@@ -102,8 +102,8 @@
             &--small {
                 max-width: 240px;
 
-                @include small-mobile {
-                    max-width: 300px;
+                @include mobile {
+                    max-width: none;
                 }
             }
         }
@@ -120,6 +120,10 @@
                 height: 134px;
                 resize: none;
             }
+
+            &.error {
+                border: 1px solid #f00;
+            }
         }
 
         &-button {
@@ -128,5 +132,12 @@
             color: #fff;
             background-color: #1d1e25;
         }
+    }
+}
+
+// Phone form fix
+.iti {
+    &__country-container {
+        height: 44px;
     }
 }
