@@ -46,6 +46,7 @@
         font-weight: 700;
         letter-spacing: -0.04em;
         text-align: center;
+        color: var(--neutral-color-100);
 
         @include small-mobile {
             margin-top: 16px;
@@ -190,6 +191,7 @@
             margin-top: 16px;
             font-weight: 600;
             line-height: 1.42;
+            color: var(--neutral-color-100);
 
             &--best {
                 color: #fff;
@@ -217,6 +219,7 @@
             &-price {
                 font-weight: 600;
                 letter-spacing: -0.04em;
+                color: var(--neutral-color-100);
 
                 &--best {
                     color: #fff;
@@ -254,6 +257,7 @@
                 margin-top: 24px;
                 font-weight: 700;
                 line-height: 1.5;
+                color: var(--neutral-color-100);
 
                 &--best {
                     color: #fff;
@@ -269,6 +273,7 @@
                 }
                 font-weight: 500;
                 line-height: 1.62;
+                color: var(--neutral-color-100);
 
                 &--disabled {
                     svg {
