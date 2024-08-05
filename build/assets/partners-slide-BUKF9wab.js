@@ -1,0 +1,1 @@
+import{S as e,A as s}from"./autoplay-BJCmPrmh.js";const r=()=>{new e(".partners__slider",{modules:[s],slidesPerView:"auto",spaceBetween:10,loop:!0,speed:5e3,autoplay:{delay:0,disableOnInteraction:!1}})};export{r as u};
