@@ -1,9 +1,9 @@
 .hero {
-    padding: 114px 0 135px;
+    padding-bottom: 135px;
     background-color: var(--neutral-color-10);
 
     @include mini-desktop {
-        padding: 87px 0 141px;
+        padding-bottom: 141px;
     }
 
     @include mobile {

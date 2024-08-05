@@ -1,0 +1,264 @@
+.hero {
+    overflow: hidden;
+    padding: 105px 0 165px;
+
+    @include mobile {
+        padding-top: 70px;
+    }
+
+    &__title {
+        max-width: 959px;
+        font-weight: 700;
+        letter-spacing: -0.04em;
+        color: var(--neutral-color-100);
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+
+    &__about {
+        @include flex-center-between;
+        gap: 25px;
+        margin-top: 118px;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: start;
+            margin-top: 50px;
+        }
+
+        @include mobile {
+            gap: 50px;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        &-descr {
+            gap: 24px;
+            max-width: calc(738px + 24px + 76px);
+            font-weight: 600;
+            line-height: 1.31;
+            letter-spacing: -0.03em;
+            color: var(--neutral-color-100);
+
+            @include flex;
+
+            @include mini-desktop {
+                max-width: 800px;
+            }
+
+            @include tablet {
+                max-width: 700px;
+            }
+
+            @include small-tablet {
+                max-width: 600px;
+            }
+
+            @include mobile {
+                margin: 0 auto;
+                max-width: 450px;
+                text-align: center;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                margin-top: 26px;
+                width: 100%;
+                height: 1px;
+                max-width: 76px;
+                background-color: var(--neutral-color-100);
+
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+
+        &-link {
+            position: relative;
+            display: block;
+            width: 127px;
+            height: 127px;
+            transition: var(--transition-04);
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: inline-block;
+                transform: translate(-50%, -50%);
+                animation: rotate-container 30s linear infinite;
+
+                span {
+                    position: absolute;
+                    font-weight: 700;
+                    font-size: 12px;
+                    letter-spacing: 0.08em;
+                    text-transform: uppercase;
+                    color: var(--about-circle-color);
+                    transform-origin: center;
+                }
+            }
+
+            svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                rect {
+                    fill: var(--about-circle-color);
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+
+    &__slider {
+        margin-top: 135px;
+
+        @include tablet {
+            margin-top: 100px;
+        }
+
+        @include mobile {
+            margin-top: 70px;
+        }
+
+        &.swiper {
+            overflow: visible;
+        }
+
+        &-footnote {
+            position: absolute;
+            top: 370px;
+            left: 506px;
+            z-index: 4;
+            padding: 24px 32px 0;
+            width: 100%;
+            max-width: 570px;
+            background-color: var(--neutral-color-10);
+
+            @include mini-desktop {
+                top: 338px;
+                left: 460px;
+                padding-top: 0;
+                max-width: 520px;
+            }
+
+            @include tablet {
+                top: 338px;
+                left: -1px;
+                padding-left: 0;
+                max-width: 476px;
+            }
+
+            @include mobile {
+                top: auto;
+                bottom: 0;
+                left: calc(var(--container-padding) * -1);
+                padding: 0 var(--container-padding);
+                width: calc(100% + var(--container-padding) * 2);
+                max-width: none;
+                text-align: center;
+            }
+
+            @include small-mobile {
+                bottom: -85px;
+            }
+
+            &-title {
+                font-weight: 600;
+                line-height: 1.5;
+                letter-spacing: -0.01em;
+                color: var(--neutral-color-100);
+
+                @include mobile {
+                    margin-top: 6px;
+                }
+            }
+
+            &-descr {
+                margin-top: 8px;
+                font-weight: 500;
+                line-height: 1.78;
+                color: var(--neutral-color-150);
+
+                @include mobile {
+                    margin-top: 0;
+                }
+            }
+
+            &-button {
+                margin-top: 32px;
+                height: 56px;
+                max-width: 175px;
+                color: var(--neutral-color-10);
+
+                @include flex-all-center;
+
+                @include mini-desktop {
+                    margin-top: 16px;
+                }
+
+                @include mobile {
+                    margin: 8px auto 0;
+                }
+            }
+        }
+    }
+
+    &__slide {
+        max-width: 506px;
+
+        @include mini-desktop {
+            max-width: 460px;
+        }
+
+        @include mobile {
+            max-width: none;
+        }
+
+        & img {
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+
+    &__pagination {
+        &.pagination {
+            position: absolute;
+            bottom: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @include mobile {
+                bottom: -50px;
+            }
+
+            @include small-mobile {
+                bottom: -120px;
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@keyframes rotate-container {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

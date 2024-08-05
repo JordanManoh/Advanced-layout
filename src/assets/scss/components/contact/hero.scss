@@ -1,8 +1,8 @@
 .hero {
-    padding: 114px 0 155px;
+    padding-bottom: 155px;
 
     @include mobile {
-        padding: 90px 0;
+        padding-bottom: 90px;
     }
 
     &__title {

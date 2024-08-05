@@ -1,8 +1,8 @@
 .hero {
-    padding: 114px 0 78px;
+    padding-bottom: 78px;
 
     @include mobile {
-        padding-bottom: 68;
+        padding-bottom: 68px;
     }
 
     &.hero-circles {

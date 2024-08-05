@@ -14,7 +14,7 @@ export const useHomeSliders = () => {
             prevEl: '.insight__slider-button-prev',
         },
         pagination: {
-            el: '.insight__pagination',
+            el: '.pagination',
         },
 
         breakpoints: {
