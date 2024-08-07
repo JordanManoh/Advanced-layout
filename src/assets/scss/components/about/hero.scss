@@ -1,18 +1,16 @@
 .hero {
     overflow: hidden;
-    padding: 105px 0 165px;
-
-    @include mobile {
-        padding-top: 70px;
-    }
+    padding: 114px 0 165px;
 
     &__title {
+        margin-top: 105px;
         max-width: 959px;
         font-weight: 700;
         letter-spacing: -0.04em;
         color: var(--neutral-color-100);
 
         @include mobile {
+            margin-top: 70px;
             text-align: center;
         }
     }

@@ -6,6 +6,8 @@
     --neutral-color-40: #ced1d8;
     --neutral-color-50: #afb3bb;
     --neutral-color-60: #18181d;
+    --neutral-color-70: #606060;
+    --neutral-color-80: #35373d;
     --neutral-color-100: #1d1e25;
     --neutral-color-120: #828282;
     --neutral-color-130: #d9d9d9;
@@ -38,6 +40,7 @@
     // custom
     --pricing-best-background: #161a34;
     --about-circle-color: #161a34;
+    --socials-background-color: #ededed;
 
     // transition
     --transition-04: all 0.4s;
@@ -46,6 +49,13 @@
     --container-padding: 15px;
     --container-width: 1200px;
 
+    // z-index
+    --z-index-01: 1;
+    --z-index-02: 2;
+    --z-index-03: 3;
+    --z-index-04: 4;
+    --z-index-05: 5;
+
     @include mini-desktop {
         --container-width: 1000px;
     }
@@ -53,13 +63,6 @@
     @include tablet {
         --container-width: 860px;
     }
-
-    // z-index
-    --z-index-01: 1;
-    --z-index-02: 2;
-    --z-index-03: 3;
-    --z-index-04: 4;
-    --z-index-05: 5;
 }
 
 [data-theme='dark'] {
@@ -87,6 +90,7 @@
     // custom
     --pricing-best-background: #18181d;
     --about-circle-color: #fff;
+    --socials-background-color: #35373d;
 }
 
 [data-menu='fixed-menu'] {

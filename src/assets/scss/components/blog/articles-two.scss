@@ -1,0 +1,107 @@
+.articles-two {
+    overflow: hidden;
+    padding: 160px 0;
+
+    @include small-tablet {
+        padding: 100px 0;
+    }
+
+    @include mobile {
+        padding: 60px 0;
+    }
+
+    &__head {
+        @include flex-center-between;
+
+        @include mobile {
+            gap: 15px;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__text {
+        max-width: 406px;
+
+        &-title {
+            font-weight: 600;
+            letter-spacing: -0.04em;
+            color: var(--neutral-color-100);
+        }
+
+        &-descr {
+            margin-top: 24px;
+            font-weight: 500;
+            line-height: 1.78;
+            color: var(--neutral-color-150);
+
+            @include mobile {
+                margin-top: 12px;
+            }
+        }
+    }
+
+    &__nav {
+        @include flex;
+        gap: 16px;
+    }
+
+    &__slider {
+        margin-top: 80px;
+
+        @include tablet {
+            margin-top: 40px;
+        }
+
+        &.swiper {
+            overflow: visible;
+        }
+    }
+
+    &__slide {
+        max-width: 406px;
+
+        &--large {
+            max-width: 476px;
+        }
+
+        &-title {
+            margin-top: 24px;
+            font-weight: 600;
+            line-height: 1.31;
+            letter-spacing: -0.03em;
+            color: var(--neutral-color-100);
+
+            @include mobile {
+                margin-top: 12px;
+            }
+        }
+
+        &-descr {
+            margin-top: 16px;
+            font-weight: 500;
+            line-height: 1.78;
+            color: var(--neutral-color-150);
+
+            @include mobile {
+                margin-top: 8px;
+            }
+        }
+
+        &-button {
+            display: block;
+            margin-top: 24px;
+            border: 1px solid var(--neutral-color-40);
+            padding: 0;
+            height: 56px;
+            color: var(--neutral-color-100);
+            background-color: transparent;
+
+            @include flex-all-center;
+
+            @include mobile {
+                margin-top: 12px;
+            }
+        }
+    }
+}
